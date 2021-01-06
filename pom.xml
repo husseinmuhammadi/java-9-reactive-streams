@@ -11,6 +11,7 @@
 
     <modules>
         <module>reactive-streams-demo</module>
+        <module>document-finder</module>
     </modules>
 
     <properties>
