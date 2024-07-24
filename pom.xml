@@ -12,6 +12,7 @@
     <modules>
         <module>reactive-streams-demo</module>
         <module>document-finder</module>
+        <module>batch-processing</module>
     </modules>
 
     <properties>
