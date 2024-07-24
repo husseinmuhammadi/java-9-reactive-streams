@@ -36,7 +36,7 @@ public class ProductHelper {
     public void process(String fileName, Consumer<Product> consumer) {
         URL resource = getClass().getClassLoader().getResource(fileName);
         try (Stream<String> stream = Files.lines(Paths.get(resource.toURI()))) {
-            stream.map(name->Product.builder().id(count++).name(name).build()).forEach(p -> consumer.accept(p));
+            stream.map(name -> Product.builder().id(count++).name(name).build()).forEach(p -> consumer.accept(p));
             logger.info("All people published!");
         } catch (IOException | URISyntaxException e) {
             logger.error(e.getMessage(), e);

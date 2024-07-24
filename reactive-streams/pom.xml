@@ -10,7 +10,7 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>console-application</artifactId>
+    <artifactId>reactive-streams</artifactId>
 
     <properties>
         <main-class>com.javastudio.tutorial.Application</main-class>

@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>reactive-streams-demo</module>
+        <module>reactive-streams</module>
         <module>document-finder</module>
         <module>batch-processing</module>
     </modules>
@@ -22,64 +22,58 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <junit-jupiter.version>5.8.2</junit-jupiter.version>
-        <assertj.version>3.21.0</assertj.version>
-        <junit.version>4.13.2</junit.version>
-        <mockito.version>4.0.0</mockito.version>
+        <junit-jupiter.version>5.10.3</junit-jupiter.version>
+        <mockito.version>5.12.0</mockito.version>
+        <assertj.version>3.26.3</assertj.version>
         <slf4j.version>1.7.36</slf4j.version>
         <logback.version>1.2.10</logback.version>
 
-        <maven-antrun-plugin.version>3.0.0</maven-antrun-plugin.version>
-        <maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>
-        <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>3.2.0</maven-dependency-plugin.version>
-        <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
-        <maven-enforcer-plugin.version>3.0.0</maven-enforcer-plugin.version>
-        <maven-failsafe-plugin.version>2.22.2</maven-failsafe-plugin.version>
-        <maven-help-plugin.version>3.2.0</maven-help-plugin.version>
-        <maven-install-plugin.version>2.5.2</maven-install-plugin.version>
-        <maven-invoker-plugin.version>3.2.2</maven-invoker-plugin.version>
         <maven-jar-plugin.version>3.2.2</maven-jar-plugin.version>
-        <maven-javadoc-plugin.version>3.3.2</maven-javadoc-plugin.version>
-        <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
-        <maven-shade-plugin.version>3.2.4</maven-shade-plugin.version>
-        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
-        <maven-war-plugin.version>3.3.2</maven-war-plugin.version>
+        <maven-failsafe-plugin.version>2.22.2</maven-failsafe-plugin.version>
+
+<!--        <maven-antrun-plugin.version>3.0.0</maven-antrun-plugin.version>-->
+<!--        <maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>-->
+<!--        <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>-->
+<!--        <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>-->
+<!--        <maven-enforcer-plugin.version>3.0.0</maven-enforcer-plugin.version>-->
+<!--        <maven-help-plugin.version>3.2.0</maven-help-plugin.version>-->
+<!--        <maven-install-plugin.version>2.5.2</maven-install-plugin.version>-->
+<!--        <maven-invoker-plugin.version>3.2.2</maven-invoker-plugin.version>-->
+<!--        <maven-javadoc-plugin.version>3.3.2</maven-javadoc-plugin.version>-->
+<!--        <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>-->
+<!--        <maven-shade-plugin.version>3.2.4</maven-shade-plugin.version>-->
+<!--        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>-->
+<!--        <maven-war-plugin.version>3.3.2</maven-war-plugin.version>-->
         <main-class/>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.junit.jupiter</groupId>
-                <artifactId>junit-jupiter</artifactId>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
                 <version>${junit-jupiter.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
 
             <dependency>
                 <groupId>org.mockito</groupId>
-                <artifactId>mockito-core</artifactId>
+                <artifactId>mockito-bom</artifactId>
                 <version>${mockito.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-junit-jupiter</artifactId>
-                <version>${mockito.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
 
             <dependency>
                 <groupId>org.assertj</groupId>
-                <artifactId>assertj-core</artifactId>
+                <artifactId>assertj-bom</artifactId>
                 <version>${assertj.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
 
             <dependency>
